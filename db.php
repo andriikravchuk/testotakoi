@@ -2,11 +2,11 @@
 
 $dblocation = "phptestotakoi-testjavascript.rhcloud.com";
 
-$dbname = "phptestotakoi";
+$dbname = "testotakoi";
 
-$dbuser = "adminErXiDMk";
+$dbuser = "adminSjABdQz";
 
-$dbpasswd = "EEJD7JxWCpJU";
+$dbpasswd = "LuWCXbEvX-Da";
 
 $dbcnx = mysql_connect($dblocation,$dbuser,$dbpasswd);
 if (!$dbcnx)
