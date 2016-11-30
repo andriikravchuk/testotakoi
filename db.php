@@ -15,7 +15,7 @@ $dbname = constant("DB_NAME"); // Database name
 $dblocation = "http://testotakoi-testjavascript.rhcloud.com";
 
 
-$dbcnx = mysql_connect(
+$dbcnx = mysqli_connect(
     getenv('OPENSHIFT_MYSQL_DB_HOST'), 
     getenv('OPENSHIFT_MYSQL_DB_USERNAME'), 
     getenv('OPENSHIFT_MYSQL_DB_HOST'), 
@@ -29,7 +29,7 @@ if (!$dbcnx)
     exit();
 }
 
-if (!mysql_select_db($dbname, $dbcnx) )
+if (!mysqli_select_db($dbname, $dbcnx) )
 {
     echo( "<P>В настоящий момент база данных не доступна, поэтому корректное
                        отображение страницы невозможно.</P>" );
