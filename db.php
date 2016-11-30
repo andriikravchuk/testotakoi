@@ -1,12 +1,12 @@
 <?php
 
-$dblocation = "localhost";
+$dblocation = "phptestotakoi-testjavascript.rhcloud.com";
 
-$dbname = "testotakoi";
+$dbname = "phptestotakoi";
 
-$dbuser = "root";
+$dbuser = "adminErXiDMk";
 
-$dbpasswd = "";
+$dbpasswd = "EEJD7JxWCpJU";
 
 $dbcnx = mysql_connect($dblocation,$dbuser,$dbpasswd);
 if (!$dbcnx)
