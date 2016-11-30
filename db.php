@@ -30,10 +30,10 @@ $id = $_POST['pid'];
 
 if ($type == 'add'){
 
-$name = $_POST['pname'];
-$email = $_POST['pemail'];
-$sait = $_POST['psait'];
-$record = $_POST['precord'];
+$name = strip_tags($_POST['pname']);
+$email = strip_tags($_POST['pemail']);
+$sait = strip_tags($_POST['psait']);
+$record = strip_tags($_POST['precord']);
 if ($name != '' && $email != '' && $record != '') {
 $ip = $_SERVER['REMOTE_ADDR'].' '.$_SERVER['SERVER_PORT'];
 $user_agent = $_SERVER["HTTP_USER_AGENT"];
