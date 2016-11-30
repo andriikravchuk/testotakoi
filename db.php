@@ -1,6 +1,6 @@
 <?php
 
-$dblocation = "testotakoi-testjavascript.rhcloud.com";
+$dblocation = "testotakoi-testjavascript.rhcloud.com:3306";
 
 $dbname = "testotakoi";
 
