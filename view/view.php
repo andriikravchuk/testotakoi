@@ -13,15 +13,8 @@ class View
     }
 
     public function output_style() {
-    	return '<meta charset="UTF-8">'.
-        '<script src="http://code.jquery.com/jquery-latest.js"></script>';
-		// '<link rel="stylesheet" href="/bootstrap.min.css">'.
-		// '<link rel="stylesheet" href="/theme.css">';
+    	return '<meta charset="UTF-8">';
     }
-    // public function output() {
-    //     $tp = include_once 'adding_form.php' + include_once 'sign-in.php'+ include_once 'profile.php'+ include_once 'track_list.php';
-    //     return $tp;
-    // }
 
     public function output_adding_form() {
         include_once 'adding_form.php';

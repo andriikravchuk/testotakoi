@@ -1,8 +1,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="bootstrap.min.css">
-<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/theme.css">
 <title>list</title>
 </head>
 <body>
@@ -17,11 +17,12 @@ require_once 'controller/controller.php';
 $model = new Model();
 $controller = new Controller($model);
 $view = new View($controller, $model);
-// echo $view->output();
 echo $view->output_adding_form();
 echo $view->output_track_list();
 echo $view->output_profile();
 echo $view->output_sign_in();
+
+
 ?>
 </div>
 

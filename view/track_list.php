@@ -1,106 +1,25 @@
-<div>
-	<table class="table table-striped table-hover">
-		<tr>
-			<th class="col-sm-1">ID</th>
-			<th class="col-sm-1">Ім'я</th>
-			<th class="col-sm-2">E-mail</th>
-			<th class="col-sm-2">Сайт</th>
-			<th class="col-sm-5">Текст запису</th>
-			<th class="col-sm-1"></th>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr><tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr><tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-			<td>4</td>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-	</table>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+setInterval(function getlist(){
+    $.ajax({
+        type: "POST",
+        url: "db.php",
+        data: {type:'select'},
+        success: function(html){
+        	$("#list").html(html);
+		}	
+	});
+}, 1000);
+
+function deleterec(id) {
+    $.ajax({
+        type: "POST",
+        url: "db.php",
+        data: {type:'delete', pid:id},
+	});
+}
+</script>
+
+<div id="list">
+
 </div>

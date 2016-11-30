@@ -1,4 +1,5 @@
-<script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
 function getdetails(){
     var name = $('#name').val();
     var email = $('#email').val();
@@ -11,6 +12,7 @@ function getdetails(){
         success: function(html){
         	$("#msg").html(html);
 		}	
+    
 	});
 }
 </script>
@@ -24,7 +26,7 @@ function getdetails(){
       <label for = "firstname" class = "col-sm-2 control-label">Ім'я</label>
 		
       <div class = "col-sm-8">
-         <input type = "text" class = "form-control" id = "name" placeholder = "ВВедіть ваше ім'я">
+         <input type = "text" class = "form-control" id = "name" required placeholder = "ВВедіть ваше ім'я">
       </div>
    </div>
    
@@ -32,7 +34,7 @@ function getdetails(){
       <label for = "lastname" class = "col-sm-2 control-label">E-mail</label>
 		
       <div class = "col-sm-8">
-         <input type = "email" class = "form-control" id = "email" placeholder = "Введіт ваш E-mail">
+         <input type = "email" class = "form-control" id = "email" required placeholder = "Введіт ваш E-mail">
       </div>
    </div>
 
@@ -48,15 +50,15 @@ function getdetails(){
       <label for = "lastname" class = "col-sm-2 control-label">Ваш відгук</label>
 		
       <div class = "col-sm-8">
-	      <textarea class = "form-control" rows = "3" id="record"></textarea>
+	      <textarea class = "form-control" rows = "3" required id="record"></textarea>
       </div>
    </div>
 
    <div class = "form-group">
       <div class = "col-sm-offset-2 col-sm-10">
-         <button type = "button" href="db.php" class = "btn btn-default" onclick="getdetails()">Додати</button>
+         <button type = "button" class = "btn btn-default" onclick="getdetails()">Додати</button>
       </div>
    </div>
 </form>
 
-<div id="msg"></div>
+<center><div id="msg"></div></center>
